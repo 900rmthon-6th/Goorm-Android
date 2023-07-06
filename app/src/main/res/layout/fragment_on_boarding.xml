@@ -16,6 +16,7 @@
         android:layout_height="match_parent"
         tools:context=".presentation.onboarding.OnBoardingFragment">
         <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/indicator_onboarding"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:progress="20"
@@ -26,73 +27,25 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/const_top_onboarding"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_progress_onboarding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/indicator_onboarding"
+            app:layout_constraintStart_toStartOf="@id/indicator_onboarding"
+            app:layout_constraintEnd_toEndOf="@id/indicator_onboarding"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/kcc_ganpan"
+            android:text=""
+            android:textSize="16sp"
+            />
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp_onboarding"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:animateLayoutChanges="true"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="240dp">
-            <TextView
-                android:id="@+id/tv_question_onboarding"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="질문"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_answer1_onboarding"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="답변1"
-                app:layout_constraintEnd_toEndOf="@id/tv_question_onboarding"
-                app:layout_constraintStart_toStartOf="@id/tv_question_onboarding"
-                app:layout_constraintTop_toBottomOf="@id/tv_question_onboarding" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_answer2_onboarding"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="답변2"
-                app:layout_constraintEnd_toEndOf="@id/tv_question_onboarding"
-                app:layout_constraintStart_toStartOf="@id/tv_question_onboarding"
-                app:layout_constraintTop_toBottomOf="@id/btn_answer1_onboarding" />
-
-            <androidx.constraintlayout.widget.Group
-                android:id="@+id/group_qna"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:constraint_referenced_ids="tv_question_onboarding,btn_answer1_onboarding,btn_answer2_onboarding" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/const_bottom_onboarding"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="520dp">
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_back_question"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="이전 질문으로"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_height="match_parent"
+            android:layout_marginTop="165dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_progress_onboarding"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

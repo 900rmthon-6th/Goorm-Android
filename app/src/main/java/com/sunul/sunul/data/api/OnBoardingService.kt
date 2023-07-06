@@ -5,8 +5,6 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 interface OnBoardingService {
-    @GET("/mbti/{qid}")
-    suspend fun getQnA(
-        @Path("qid") qid: String,
-    ): ResponseQnA
+    @GET("/mbti/all")
+    suspend fun getQnA(): ResponseQnA
 }
