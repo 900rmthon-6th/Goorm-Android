@@ -21,7 +21,13 @@
             android:exported="false" />
         <activity
             android:name=".presentation.result.ResultActivity"
-            android:exported="false" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".presentation.prologue.PrologueActivity"
             android:exported="false" />
@@ -30,13 +36,9 @@
             android:exported="false" />
         <activity
             android:name=".presentation.splash.SplashActivity"
-            android:exported="true"
+            android:exported="false"
             android:theme="@style/Theme.Sunul">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".presentation.MainActivity"
