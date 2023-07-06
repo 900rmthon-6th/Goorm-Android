@@ -10,6 +10,7 @@ import com.sunul.sunul.R
 import com.sunul.sunul.binding.BindingFragment
 import com.sunul.sunul.data.dto.OnBoardingDTO
 import com.sunul.sunul.databinding.FragmentOnBoardingBinding
+import com.sunul.sunul.presentation.MainActivity
 import com.sunul.sunul.presentation.MainViewModel
 import com.sunul.sunul.util.callback.OnBoardingItemClick
 import com.sunul.sunul.util.extension.showToast
@@ -68,9 +69,9 @@ class OnBoardingFragment :
 
     override fun selectItem(answer: String,isLast:Boolean) {
         if (isLast){
-            requireContext().showToast("post 및 로딩뷰 진입")
             viewModel.answersToPost.add(answer)
-            //post 및 로딩뷰 진입
+            (requireActivity() as MainActivity).changeFragment("personal")
+
         }
         else{
             binding.vpOnboarding.currentItem = ++currentPosition
