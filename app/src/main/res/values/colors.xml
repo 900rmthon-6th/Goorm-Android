@@ -6,4 +6,7 @@
     <color name="sunulorange">#F99239</color>
     <color name="sunulgreen">#74A862</color>
     <color name="textcolor">#858899</color>
+    <color name="grey700">#525463</color>
+    <color name="grey500">#A9ABB8</color>
+    <color name="grey400">#CDCED6</color>
 </resources>
