@@ -10,6 +10,7 @@ import com.sunul.sunul.binding.BindingActivity
 import com.sunul.sunul.databinding.ActivityMainBinding
 import com.sunul.sunul.presentation.onboarding.OnBoardingFragment
 import com.sunul.sunul.presentation.personal.PersonalFragment
+import com.sunul.sunul.presentation.spot.SpotFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -20,6 +21,7 @@ class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main
         super.onCreate(savedInstanceState)
         binding.vm = viewModel
         binding.lifecycleOwner = this
+
         initView()
     }
     private fun initView(){
@@ -34,10 +36,14 @@ class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main
             PERSONAL->supportFragmentManager.commit {
                 replace<PersonalFragment>(R.id.fl_main)
             }
+            SPOT -> supportFragmentManager.commit {
+                replace<SpotFragment>(R.id.fl_main)
+            }
         }
     }
     companion object{
         const val ONBOARDING = "onBoarding"
         const val PERSONAL = "personal"
+        const val SPOT = "spot"
     }
 }

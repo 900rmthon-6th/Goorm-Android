@@ -76,7 +76,7 @@
                     android:layout_height="wrap_content"
                     android:textAlignment="center"
                     android:padding="10dp"
-                    android:text="🌴제주도 워킹홀리데이 서비스🌴 \n서귀포 하효마을, 제주도의 푸른 보물을 만나보세요. \n\n 제주 서귀포시 하효중앙로"
+                    android:text="제주도 워킹홀리데이 서비스 \n서귀포 하효마을, 제주도의 푸른 보물을 만나보세요. \n\n 제주 서귀포시 하효중앙로"
                     app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
                 <TextView

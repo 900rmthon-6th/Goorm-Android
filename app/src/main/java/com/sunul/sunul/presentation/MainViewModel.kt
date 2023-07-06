@@ -7,15 +7,18 @@ import com.runnect.runnect.presentation.state.UiState
 import com.sunul.sunul.R
 import com.sunul.sunul.data.dto.MbtiInfoDTO
 import com.sunul.sunul.data.dto.OnBoardingDTO
+import com.sunul.sunul.data.dto.SpotDTO
 import com.sunul.sunul.data.model.request.RequestPersonalResult
+import com.sunul.sunul.data.model.response.SpotData
 import com.sunul.sunul.domain.OnBoardingRepository
+import com.sunul.sunul.domain.SpotRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import timber.log.Timber
 import javax.inject.Inject
 
 @HiltViewModel
-class MainViewModel@Inject constructor(private val onBoardingRepository: OnBoardingRepository):ViewModel() {
+class MainViewModel@Inject constructor(private val onBoardingRepository: OnBoardingRepository,private val spotRepository: SpotRepository):ViewModel() {
     var curIndex = MutableLiveData<Int>(1)
     val maxSize = MutableLiveData<Int>(8)
     val uiState = MutableLiveData<UiState>()
@@ -25,6 +28,9 @@ class MainViewModel@Inject constructor(private val onBoardingRepository: OnBoard
     var personalMbti = MutableLiveData<String>("")
     var personalReason = MutableLiveData<String>("")
     val mbtiHashMap = HashMap<String,MbtiInfoDTO>()
+    var spots = mutableListOf<SpotDTO>()
+    val spotImages = listOf<Int>()
+    var imageIndex = 0
     private val qnaIcons
             = mutableListOf<Int>(
         R.drawable.intp, R.drawable.infj, R.drawable.isfp, R.drawable.estj
@@ -71,6 +77,23 @@ class MainViewModel@Inject constructor(private val onBoardingRepository: OnBoard
             }
         }
 
+    }
+
+    fun getSpots(){
+        viewModelScope.launch {
+            runCatching {
+                uiState.value = UiState.Loading
+                spotRepository.getSpots(personalMbti.value.toString())
+            }.onSuccess {
+                it.data.forEach {spotData->
+                    spots.add(SpotDTO(spotImages[imageIndex],spotData))
+                    imageIndex+=1
+                }
+                uiState.value = UiState.Success
+            }.onFailure {
+                uiState.value = UiState.Failure
+            }
+        }
     }
     fun divideMbti(){
         mbtiHashMap["ENFJ"] = MbtiInfoDTO(R.drawable.enfj,R.string.enfj_title,R.string.enfj_desc)
