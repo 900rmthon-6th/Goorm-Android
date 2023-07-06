@@ -3,6 +3,7 @@ package com.sunul.sunul.data.model.response
 import com.google.gson.annotations.SerializedName
 import kotlinx.serialization.Serializable
 
+@Serializable
 data class ResponseSpots(
     @SerializedName("data")
     val `data`: List<SpotData>

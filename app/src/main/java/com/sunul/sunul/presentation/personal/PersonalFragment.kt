@@ -28,6 +28,7 @@ class PersonalFragment : BindingFragment<FragmentPersonalBinding>(R.layout.fragm
     }
     private fun addListeners(){
         binding.testBtn.setOnClickListener {
+            Timber.d("changeFragment to spot")
             (requireActivity() as MainActivity).changeFragment("spot")
         }
     }
