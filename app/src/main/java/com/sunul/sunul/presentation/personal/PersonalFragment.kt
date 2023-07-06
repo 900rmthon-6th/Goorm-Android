@@ -1,11 +1,7 @@
 package com.sunul.sunul.presentation.personal
 
-import android.content.ContentValues
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.activityViewModels
 import com.runnect.runnect.presentation.state.UiState
@@ -25,18 +21,41 @@ class PersonalFragment : BindingFragment<FragmentPersonalBinding>(R.layout.fragm
         binding.vm = viewModel
         binding.lifecycleOwner = this.viewLifecycleOwner
         addObservers()
+        viewModel.postQnAs()
+
     }
-    private fun addObservers(){
-        viewModel.uiState.observe(viewLifecycleOwner){
+
+    private fun addObservers() {
+        viewModel.uiState.observe(viewLifecycleOwner) {
             when (it) {
                 UiState.Empty -> binding.indeterminateBar.isVisible = false //visible 옵션으로 처리하는 게 맞나
-                UiState.Loading -> binding.indeterminateBar.isVisible = true
-                UiState.Success -> {
-                    binding.indeterminateBar.isVisible = false
+                UiState.Loading -> {
+                    with(binding){
+                        tvWaitingAlert.isVisible = true
+                        indeterminateBar.isVisible = true
+                        scrollView.isVisible = false
+                        testBtn.isVisible = false
+                    }
 
                 }
+                UiState.Success -> {
+                    with(binding){
+                        tvWaitingAlert.isVisible = false
+                        indeterminateBar.isVisible = false
+                        scrollView.isVisible = true
+                        testBtn.isVisible = true
+                        val personalInfo = viewModel.mbtiHashMap[viewModel.personalMbti.value.toString()]
+                        imageView3.setImageResource(personalInfo!!.image)
+                        textView2.text = getString(personalInfo.title)
+                        textView4.text = getString(personalInfo.desc)
+                    }
+                }
                 UiState.Failure -> {
-                    binding.indeterminateBar.isVisible = false
+                    with(binding){
+                        tvWaitingAlert.isVisible = true
+                        tvWaitingAlert.text = "알 수 없는 오류가 발생했습니다!"
+                        binding.indeterminateBar.isVisible = false
+                    }
                 }
             }
         }

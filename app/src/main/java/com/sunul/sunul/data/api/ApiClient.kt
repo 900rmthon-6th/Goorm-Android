@@ -9,6 +9,7 @@ import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
+import java.util.concurrent.TimeUnit
 
 object ApiClient {
 
@@ -21,6 +22,9 @@ object ApiClient {
     private val client by lazy {
         OkHttpClient.Builder()
             .addInterceptor(logger)
+            .connectTimeout(100, TimeUnit.SECONDS)
+            .readTimeout(100,TimeUnit.SECONDS)
+            .writeTimeout(100,TimeUnit.SECONDS)
             .build()
     }
 
