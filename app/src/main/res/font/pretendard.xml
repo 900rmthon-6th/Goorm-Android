@@ -19,7 +19,7 @@
 <!--    <font-->
 <!--        android:fontStyle="normal"-->
 <!--        android:fontWeight="700"-->
-<!--        android:font="@font/pretendard_b"/>-->
+<!--        android:font="@font/pre"/>-->
     <font
         android:fontStyle="normal"
         android:fontWeight="900"
