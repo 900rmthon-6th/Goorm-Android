@@ -89,23 +89,25 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
-                android:text="서귀포의 제주마을에서 귤 농장에 방문하면 \n귤 따기 체험을 통해 일손 부족을 해결할 수 있어요."
-                android:textColor="@color/textcolor"
-                android:textSize="14sp"
                 android:fontFamily="@font/pretendard_regular"
-                android:layout_marginHorizontal="10dp"
                 android:gravity="start"
-                app:layout_constraintStart_toStartOf="@+id/textView1"
-                android:layout_marginEnd="110dp"
+                android:text="서귀포의 제주마을에서 귤 농장에 방문하면 귤 따기 체험을 통해 일손 부족을 해결할 수 있어요."
+                android:textColor="@color/textcolor"
+                android:paddingHorizontal="10dp"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView1" />
             <ImageView
                 android:id="@+id/iv_icon_location"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/tabler_map_pin"
+                android:paddingLeft="10dp"
                 app:layout_constraintStart_toStartOf="@id/textView6"
                 app:layout_constraintTop_toBottomOf="@id/textView6"
                 android:layout_marginTop="10dp"/>
+
             <TextView
                 android:id="@+id/textView7"
                 android:layout_width="wrap_content"
@@ -115,9 +117,12 @@
                 android:text="서귀포 제주마을"
                 android:textColor="@color/textcolor"
                 android:textSize="16sp"
-                app:layout_constraintStart_toEndOf="@id/iv_icon_location"
+                app:layout_constraintBottom_toBottomOf="@id/iv_icon_location"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/iv_icon_location"
                 app:layout_constraintTop_toTopOf="@id/iv_icon_location"
-                app:layout_constraintBottom_toBottomOf="@id/iv_icon_location"/>
+                app:layout_constraintVertical_bias="0.526" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

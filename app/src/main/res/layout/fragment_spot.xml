@@ -63,7 +63,7 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/sunulblack"
                         android:fontFamily="@font/pretendard_bold"
-                        android:text="이런 수눌음이 \n잘 맞을 거 같아요!"
+                        android:text="제주 여행에서 \n수눌음은 어때요?"
                         android:textSize="24dp"
                         android:lineHeight="32dp"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -75,7 +75,7 @@
                         android:lineHeight="18dp"
                         android:fontFamily="@font/pretendard_regular"
                         android:textColor="@color/textcolor"
-                        android:text="이런 수눌음이 잘 맞을 거 같아요. \n이런 수눌음이 잘 맞을 거 같아요."
+                        android:text="수눌음이란 단순한 협력의 의미를 넘어 \n'함께'의 가치를 실현하는 제주도의 공동 노동 문화를 \n의미하는 고유어예요."
                         android:textSize="14dp"
                         app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
@@ -95,10 +95,10 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/sunulblack"
                         android:fontFamily="@font/pretendard_bold"
-                        android:text="제주 여행에서 수눌음은 어때요?"
+                        android:text="이런 수눌음을 추천해요"
                         android:textSize="18dp"
-                        android:lineHeight="24dp"
-                        android:paddingBottom="10dp"
+                        android:lineHeight="22dp"
+                        android:paddingBottom="5dp"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
@@ -107,7 +107,7 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/sunulblack"
                         android:fontFamily="@font/pretendard_regular"
-                        android:text="수눌음이란 단순한 협력의 의미를 넘어 함께의 가치를 실현하고 제주도의 공동 노동 문화를 의미하는 고유어예요. \n수눌수눌은 일손이 부족한 제주의 방문 장소를 제안해요. \n이번 제주 여행은 수눌음 경험을 통해 제주에서 뜻깊은 경험을 만들어가는 건 어떠세요?"
+                        android:text="평범하고 틀에 박힌 제주 여행에 싫증난 당신을 위해 \n수눌수눌과 함께 제주에서 특별한 경험을 만들어보세요"
                         android:textSize="14dp"
                         android:lineHeight="18dp"
                         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -120,7 +120,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:listitem="@layout/jobs_layout"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="30dp"
                     app:layout_constraintTop_toBottomOf="@id/constraintLayout5"
                     app:layout_constraintBottom_toTopOf="@id/test_btn"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
