@@ -2,4 +2,51 @@
     <string name="app_name">Sunul</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="istj_title">투박한 보석</string>
+    <string name="istj_desc">신중하고 철저한 돌이지만,  웃음 속에는 미소와 따뜻함이 숨어있어요.</string>
+
+    <string name="isfj_title">따뜻한 은총</string>
+    <string name="isfj_desc">차분하고 도움을 주는 나무로 알려져 있지만, 웃음 속에는 행복한 표정이 가득합니다.</string>
+
+    <string name="infj_title">꿈틀거리는 비올라</string>
+    <string name="infj_desc">이상주의적인 비전을 가진 폭포입니다. 내 안에 피어난 독특한 매력을 발산하고 있어요.</string>
+
+    <string name="intj_title">예리한 보석상자</string>
+    <string name="intj_desc">전략적이고 독립적인 동굴 속에는 내면의 표정이 깊이 숨겨져 있습니다.</string>
+
+    <string name="istp_title">유연한 현무암</string>
+    <string name="istp_desc">조용하고 탐구적인 현무암이지만, 웃음 속에는 행복한 표정이 담겨있습니다.</string>
+
+    <string name="isfp_title">아름다운 캔버스</string>
+    <string name="isfp_desc">예술적이고 온정적인 수국으로 알려져 있지만, 웃는 표정은 더욱 특별한 저의 매력을 드러냅니다.</string>
+
+    <string name="infp_title">자유로운 바람</string>
+    <string name="infp_desc">바람처럼 자유로운 표정에는 깊이 있는 감성이 담겨있어요.</string>
+
+    <string name="intp_title">창의적인 당근</string>
+    <string name="intp_desc">독창적이고 비판적인 당근이지만, 저의 창의력과 열정은 눈부실 만큼 확고해요.</string>
+
+    <string name="estp_title">용감한 파도</string>
+    <string name="estp_desc">대담하고 활동적인 파도는 모험과 열정을 추구하는 끊임없는 흥분이 담겨있어요.</string>
+
+    <string name="esfp_title">즐거운 고등어</string>
+    <string name="esfp_desc">밝고 유쾌한 고등어. 웃음이 가득한 표정은 쾌활한 에너지와 즐거움을 전달해줍니다.</string>
+
+    <string name="enfp_title">열정적인 마늘</string>
+    <string name="enfp_desc">열정적이고 창의적인 마늘입니다. 웃음이 넘치는 표정으로 주변을 환하게 밝혀줄 거예요.</string>
+
+    <string name="entp_title">놀라운 화산</string>
+    <string name="entp_desc">독창적이고 재치있는 화산으로 알려져 있어요. 놀라움과 재미가 있는 세상을 함께 탐험해봐요.</string>
+
+    <string name="estj_title">활동적인 돌하루방</string>
+    <string name="estj_desc">현실적이고 책임감 있는 돌하루방입니다. 신뢰와 안정감이 전해지는 모습으로 주변을 안심시켜줄 거예요.</string>
+
+    <string name="esfj_title">따뜻한 야자수</string>
+    <string name="esfj_desc">사교적이고 동정심 많은 야자수. 행복한 표정을 지닌 저는 주변에 따뜻한 분위기를 전해줄 거예요.</string>
+
+    <string name="enfj_title">밝은 성산일출봉</string>
+    <string name="enfj_desc">친화적이고 영감을 주는 성산일출봉입니다. 웃는 표정으로 주변에 긍정과 열정을 불어넣어줄 거예요.</string>
+
+    <string name="entj_title">단단한 바나나</string>
+    <string name="entj_desc">지도력 있는 리더적인 바나나입니다. 결단력과 비전을 지닌 모습으로 주변을 감동시킬 거예요.</string>
 </resources>
