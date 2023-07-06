@@ -2,5 +2,6 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="btn_margin_horizontal">20dp</dimen>
     <dimen name="btn_padding_vertical">13dp</dimen>
-    <dimen name="img_view_size">200dp</dimen>
+    <dimen name="img_view_size">180dp</dimen>
+    <dimen name="img_view_height">50dp</dimen>
 </resources>

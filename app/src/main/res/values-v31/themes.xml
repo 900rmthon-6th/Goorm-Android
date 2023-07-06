@@ -2,11 +2,8 @@
 <resources>
 
     <style name="Base.Theme.Sunul" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-         <item name="colorPrimary">@color/sunulblack</item>
-        <item name="android:windowSplashScreenBackground">@color/sunulorange</item>
-        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
-        <item name="android:windowSplashScreenAnimationDuration">3000</item>
+        <item name="colorPrimary">@color/sunulblack</item>
+        <item name="android:windowSplashScreenBackground">@color/white</item>
         <item name="android:buttonStyle">@font/pretendard_bold</item>
     </style>
     <style name="pretendard_bold">
