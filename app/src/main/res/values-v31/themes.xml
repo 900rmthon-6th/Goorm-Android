@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.Theme.Sunul" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/sunulblack</item>
+        <item name="android:windowSplashScreenBackground">@color/white</item>
+        <item name="android:buttonStyle">@font/pretendard_bold</item>
+    </style>
+    <style name="pretendard_bold">
+        <item name="android:fontFamily">@font/pretendard_black</item>
+    </style>
+    <style name="pretendard_black">
+        <item name="android:fontFamily">@font/pretendard_bold</item>
+    </style>
+    <style name="pretendard_medium">
+        <item name="android:fontFamily">@font/pretendard_medium</item>
+    </style>
+    <style name="pretendard_regular">
+        <item name="android:fontFamily">@font/pretendard_regular</item>
+    </style>
+    <style name="pretendard_light">
+        <item name="android:fontFamily">@font/pretendard_light</item>
+    </style>
+    <style name="pretendard_thin">
+        <item name="android:fontFamily">@font/pretendard_thin</item>
+    </style>
+</resources>

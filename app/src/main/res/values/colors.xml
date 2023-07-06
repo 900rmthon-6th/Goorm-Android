@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="sunulblack">#3E404C</color>
+    <color name="sunulorange">#F99239</color>
+    <color name="sunulgreen">#74A862</color>
+    <color name="textcolor">#858899</color>
 </resources>
