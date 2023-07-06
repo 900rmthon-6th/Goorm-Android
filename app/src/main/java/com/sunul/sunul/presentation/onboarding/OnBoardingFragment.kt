@@ -2,6 +2,7 @@ package com.sunul.sunul.presentation.onboarding
 
 import android.os.Bundle
 import android.view.View
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.viewpager2.widget.ViewPager2
 import com.runnect.runnect.presentation.state.UiState
@@ -9,6 +10,7 @@ import com.sunul.sunul.R
 import com.sunul.sunul.binding.BindingFragment
 import com.sunul.sunul.data.dto.OnBoardingDTO
 import com.sunul.sunul.databinding.FragmentOnBoardingBinding
+import com.sunul.sunul.presentation.MainViewModel
 import com.sunul.sunul.util.callback.OnBoardingItemClick
 import com.sunul.sunul.util.extension.showToast
 import dagger.hilt.android.AndroidEntryPoint
@@ -17,7 +19,7 @@ import timber.log.Timber
 @AndroidEntryPoint
 class OnBoardingFragment :
     BindingFragment<FragmentOnBoardingBinding>(R.layout.fragment_on_boarding),OnBoardingItemClick {
-    private val viewModel: OnBoardingVIewModel by viewModels()
+    private val viewModel: MainViewModel by activityViewModels()
     private lateinit var onBoardingAdapter: OnBoardingAdapter
     private var currentPosition = 0
 

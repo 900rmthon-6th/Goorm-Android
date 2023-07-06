@@ -7,7 +7,7 @@
 
         <variable
             name="vm"
-            type="com.sunul.sunul.presentation.onboarding.OnBoardingVIewModel" />
+            type="com.sunul.sunul.presentation.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
