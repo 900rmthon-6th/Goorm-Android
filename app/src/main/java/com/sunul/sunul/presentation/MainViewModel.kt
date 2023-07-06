@@ -9,9 +9,15 @@ import com.sunul.sunul.data.dto.MbtiInfoDTO
 import com.sunul.sunul.data.dto.OnBoardingDTO
 import com.sunul.sunul.data.dto.SpotDTO
 import com.sunul.sunul.data.model.request.RequestPersonalResult
+import com.sunul.sunul.data.model.response.ResponseMbtiChat
+import com.sunul.sunul.data.model.response.ResponseSpots
 import com.sunul.sunul.domain.OnBoardingRepository
 import com.sunul.sunul.domain.SpotRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Deferred
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
+import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.launch
 import timber.log.Timber
 import javax.inject.Inject
@@ -29,6 +35,7 @@ class MainViewModel @Inject constructor(
     var index = 0
     var personalMbti = MutableLiveData<String>("")
     var personalReason = MutableLiveData<String>("")
+    var mbtiChatContent = MutableLiveData<String>("")
     val mbtiHashMap = HashMap<String, MbtiInfoDTO>()
     var spots = mutableListOf<SpotDTO>()
     val spotImages = listOf<Int>(
@@ -101,6 +108,40 @@ class MainViewModel @Inject constructor(
 
     }
 
+    fun getSpotsChat(){
+        viewModelScope.launch {
+            runCatching {
+                Timber.d("getSpots 호출")
+                uiState.value = UiState.Loading
+                val deferredSpot: Deferred<ResponseSpots> =
+                    async(Dispatchers.IO){
+                        spotRepository.getSpots(personalMbti.value.toString())
+                    }
+                val deferredChat: Deferred<ResponseMbtiChat> =
+                    async(Dispatchers.IO){
+                        spotRepository.getSpotChat(personalMbti.value.toString())
+                    }
+                val resultSpot = deferredSpot.await()
+                val resultChat = deferredChat.await()
+                val result = listOf(resultSpot,resultChat)
+                result
+            }.onSuccess {
+                (it[0] as ResponseSpots).data.forEach{spotData ->
+                    spots.add(SpotDTO(spotImages[imageIndex], spotData))
+                    imageIndex += 1
+                }
+                mbtiChatContent.value = (it[1] as ResponseMbtiChat).choices[0].message.content
+
+                uiState.value = UiState.Success
+
+
+            }.onFailure {
+                Timber.d("${it.cause}")
+                Timber.d("${it.message}")
+                uiState.value = UiState.Failure
+            }
+        }
+    }
     fun getSpots() {
         viewModelScope.launch {
             runCatching {
@@ -114,6 +155,24 @@ class MainViewModel @Inject constructor(
                 }
                 Timber.d("getSpots $spots")
                 uiState.value = UiState.Success
+            }.onFailure {
+                Timber.d("${it.cause}")
+                Timber.d("${it.message}")
+                uiState.value = UiState.Failure
+            }
+        }
+    }
+
+    fun getSpotChat(){
+        viewModelScope.launch {
+            kotlin.runCatching {
+                uiState.value = UiState.Loading
+                spotRepository.getSpotChat(personalMbti.value.toString())
+
+            }.onSuccess {
+                mbtiChatContent.value = it.choices[0].message.content
+                uiState.value = UiState.Success
+
             }.onFailure {
                 Timber.d("${it.cause}")
                 Timber.d("${it.message}")

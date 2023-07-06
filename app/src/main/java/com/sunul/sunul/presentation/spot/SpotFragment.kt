@@ -24,7 +24,8 @@ class SpotFragment : BindingFragment<FragmentSpotBinding>(R.layout.fragment_spot
         binding.vm = viewModel
         binding.lifecycleOwner = this.viewLifecycleOwner
         Timber.d("SpotFragment 진입")
-        viewModel.getSpots()
+
+        viewModel.getSpotsChat()
         addObservers()
         setSpotAdapter(viewModel.spots)
 
