@@ -21,12 +21,13 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import android.animation.PropertyValuesHolder
 
 import com.sunul.sunul.presentation.MainActivity
+import com.sunul.sunul.presentation.intro.IntroActivity
 
 class SplashActivity : AppCompatActivity() {
 
     private val splashDelay: Long = 3 // 3초 동안 SplashActivity 표시
     private val splashCoroutineScope = CoroutineScope(Dispatchers.Main)
-    private lateinit var binding: ActivityMainBinding
+//    private lateinit var binding: ActivityMainBinding
     private val handler = Handler(Looper.getMainLooper())
 
 
@@ -35,8 +36,8 @@ class SplashActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         val splashScreen = installSplashScreen()
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+//        binding = ActivityMainBinding.inflate(layoutInflater)
+//        setContentView(binding.root)
 
         // 스플래시 화면 닫기 애니메이션
         splashScreen.setOnExitAnimationListener { splashScreenView ->
@@ -66,7 +67,7 @@ class SplashActivity : AppCompatActivity() {
 
     private fun moveMain(sec: Long) {
         handler.postDelayed({
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, IntroActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
             startActivity(intent)
             finish()
