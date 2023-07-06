@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_icon_item_onboarding"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            app:srcCompat="@drawable/intp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_question_item_onboarding"
+            app:layout_constraintEnd_toEndOf="@id/tv_question_item_onboarding"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_question_item_onboarding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/iv_icon_item_onboarding"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="13dp"
+            android:textColor="@color/grey700"
+            android:fontFamily="@font/pretendard_bold"
+            android:textSize="24sp"
+            android:text="오늘 점심 메뉴를 추천한다면?" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_item_onboarding_4"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:backgroundTint="@color/sunulblack"
+            app:cardCornerRadius="15dp"
+            android:layout_marginHorizontal="@dimen/fab_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@id/cv_item_onboarding_3">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_answer_item_onboarding_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="요가 클래스"
+                android:fontFamily="@font/pretendard_bold"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:layout_gravity="center" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_item_onboarding_3"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:backgroundTint="@color/sunulblack"
+            app:cardCornerRadius="15dp"
+            android:layout_marginHorizontal="@dimen/fab_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@id/cv_item_onboarding_2">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_answer_item_onboarding_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="요가 클래스"
+                android:fontFamily="@font/pretendard_bold"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:layout_gravity="center" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_item_onboarding_2"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:backgroundTint="@color/sunulblack"
+            app:cardCornerRadius="15dp"
+            android:layout_marginHorizontal="@dimen/fab_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@id/cv_item_onboarding_1">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_answer_item_onboarding_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="요가 클래스"
+                android:fontFamily="@font/pretendard_bold"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:layout_gravity="center" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_item_onboarding_1"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:backgroundTint="@color/sunulblack"
+            app:cardCornerRadius="15dp"
+            android:layout_marginHorizontal="@dimen/fab_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_answer_item_onboarding_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="요가 클래스"
+                android:fontFamily="@font/pretendard_bold"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_gravity="center" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_item_onboarding_5"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:backgroundTint="@color/sunulblack"
+            app:cardCornerRadius="15dp"
+            android:layout_marginHorizontal="@dimen/fab_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_answer_item_onboarding_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="다음 질문으로"
+                android:fontFamily="@font/pretendard_bold"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_gravity="center" />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_item_onboarding_finish"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:backgroundTint="@color/sunulorange"
+            app:cardCornerRadius="15dp"
+            android:visibility="gone"
+            android:layout_marginHorizontal="@dimen/fab_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_answer_item_onboarding_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="결과 보기"
+                android:fontFamily="@font/pretendard_bold"
+                android:textSize="16sp"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:layout_gravity="center" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_answer_item_onboarding"
+            android:layout_width="0dp"
+            android:layout_height="53dp"
+            android:hint="자세히 입력할 수록 답변이 정확해져요"
+            android:paddingStart="19dp"
+            android:textSize="15sp"
+            android:textColorHint ="@color/grey500"
+            android:textColor="@color/grey700"
+            android:fontFamily="@font/pretendard_bold"
+            app:layout_constraintTop_toBottomOf="@id/tv_question_item_onboarding"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="88dp"
+            android:background="@drawable/radius_edittext" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_warning_item_onboarding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/et_answer_item_onboarding"
+            app:layout_constraintStart_toStartOf="@id/et_answer_item_onboarding"
+            app:layout_constraintEnd_toEndOf="@id/et_answer_item_onboarding"
+            android:layout_marginTop="12dp"
+            android:text="*한 단어 이상을 입력해주세요."
+            android:fontFamily="@font/pretendard_regular"
+            android:textSize="14sp"
+            android:visibility="gone"
+            android:textColor="#FF0000"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -6,5 +6,5 @@ import com.sunul.sunul.source.OnBoardingDataSource
 
 class OnBoardingRepositoryImpl(private val onBoardingDataSource: OnBoardingDataSource) :
     OnBoardingRepository {
-    override suspend fun getQnA(qid:String): ResponseQnA = onBoardingDataSource.getQnA(qid)
+    override suspend fun getQnA(): ResponseQnA = onBoardingDataSource.getQnA()
 }
