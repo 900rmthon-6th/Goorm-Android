@@ -17,11 +17,11 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".presentation.joblist.JobListActivity"
+            android:name=".presentation.jobdetail.JobDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".presentation.result.ResultActivity"
-            android:exported="true" >
+            android:name=".presentation.joblist.JobListActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,7 +29,9 @@
             </intent-filter>
         </activity>
         <activity
-
+            android:name=".presentation.result.ResultActivity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.prologue.PrologueActivity"
             android:exported="false" />
         <activity
@@ -37,13 +39,14 @@
             android:exported="false" />
         <activity
             android:name=".presentation.splash.SplashActivity"
-            android:exported="false"
+            android:exported="true"
             android:theme="@style/Theme.Sunul">
+
+        </activity>
         <activity
             android:name=".presentation.MainActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustNothing">
-        </activity>
+            android:windowSoftInputMode="adjustNothing"></activity>
     </application>
 
 </manifest>
