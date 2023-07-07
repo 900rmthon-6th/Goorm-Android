@@ -63,13 +63,8 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/sunulblack"
                         android:fontFamily="@font/pretendard_bold"
-<<<<<<< Updated upstream
                         android:text="제주 여행에서 \n수눌음은 어때요?"
                         android:textSize="24dp"
-=======
-                        android:text="이런 수눌음이 \n잘 맞을 거 같아요!"
-                        android:textSize="24sp"
->>>>>>> Stashed changes
                         android:lineHeight="32dp"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -80,13 +75,8 @@
                         android:lineHeight="18dp"
                         android:fontFamily="@font/pretendard_regular"
                         android:textColor="@color/textcolor"
-<<<<<<< Updated upstream
                         android:text="수눌음이란 단순한 협력의 의미를 넘어 \n'함께'의 가치를 실현하는 제주도의 공동 노동 문화를 \n의미하는 고유어예요."
                         android:textSize="14dp"
-=======
-                        android:text="이런 수눌음이 잘 맞을 거 같아요. \n이런 수눌음이 잘 맞을 거 같아요."
-                        android:textSize="14sp"
->>>>>>> Stashed changes
                         app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -106,15 +96,9 @@
                         android:textColor="@color/sunulblack"
                         android:fontFamily="@font/pretendard_bold"
                         android:text="이런 수눌음을 추천해요"
-<<<<<<< Updated upstream
                         android:textSize="18dp"
                         android:lineHeight="22dp"
                         android:paddingBottom="5dp"
-=======
-                        android:textSize="18sp"
-                        android:lineHeight="24dp"
-                        android:paddingBottom="10dp"
->>>>>>> Stashed changes
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
@@ -123,13 +107,8 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/sunulblack"
                         android:fontFamily="@font/pretendard_regular"
-<<<<<<< Updated upstream
                         android:text="평범하고 틀에 박힌 제주 여행에 싫증난 당신을 위해 \n수눌수눌과 함께 제주에서 특별한 경험을 만들어보세요"
                         android:textSize="14dp"
-=======
-                        android:text="@{vm.mbtiChatContent}"
-                        android:textSize="14sp"
->>>>>>> Stashed changes
                         android:lineHeight="18dp"
                         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 

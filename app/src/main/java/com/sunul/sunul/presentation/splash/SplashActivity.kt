@@ -71,6 +71,6 @@ class SplashActivity : AppCompatActivity() {
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
             startActivity(intent)
             finish()
-        }, (100 * sec))
+        }, (200 * sec))
     }
 }
