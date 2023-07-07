@@ -1,5 +1,6 @@
 package com.sunul.sunul.presentation.spot
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.core.view.isVisible
@@ -28,7 +29,15 @@ class SpotFragment : BindingFragment<FragmentSpotBinding>(R.layout.fragment_spot
         viewModel.getSpotsChat()
         addObservers()
         setSpotAdapter(viewModel.spots)
+        addListeners()
 
+    }
+    private fun addListeners(){
+        binding.testBtn.setOnClickListener {
+            val intent = Intent(requireContext(),MainActivity::class.java)
+            startActivity(intent)
+            requireActivity().finish()
+        }
     }
 
     private fun addObservers(){

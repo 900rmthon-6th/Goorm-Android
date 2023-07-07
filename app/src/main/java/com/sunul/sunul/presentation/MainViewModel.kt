@@ -142,45 +142,6 @@ class MainViewModel @Inject constructor(
             }
         }
     }
-    fun getSpots() {
-        viewModelScope.launch {
-            runCatching {
-                Timber.d("getSpots 호출")
-                uiState.value = UiState.Loading
-                spotRepository.getSpots(personalMbti.value.toString())
-            }.onSuccess {
-                it.data.forEach { spotData ->
-                    spots.add(SpotDTO(spotImages[imageIndex], spotData))
-                    imageIndex += 1
-                }
-                Timber.d("getSpots $spots")
-                uiState.value = UiState.Success
-            }.onFailure {
-                Timber.d("${it.cause}")
-                Timber.d("${it.message}")
-                uiState.value = UiState.Failure
-            }
-        }
-    }
-
-    fun getSpotChat(){
-        viewModelScope.launch {
-            kotlin.runCatching {
-                uiState.value = UiState.Loading
-                spotRepository.getSpotChat(personalMbti.value.toString())
-
-            }.onSuccess {
-                mbtiChatContent.value = it.choices[0].message.content
-                uiState.value = UiState.Success
-
-            }.onFailure {
-                Timber.d("${it.cause}")
-                Timber.d("${it.message}")
-                uiState.value = UiState.Failure
-            }
-        }
-    }
-
     fun divideMbti() {
         mbtiHashMap["ENFJ"] = MbtiInfoDTO(R.drawable.enfj, R.string.enfj_title, R.string.enfj_desc)
         mbtiHashMap["ENFP"] = MbtiInfoDTO(R.drawable.enfp, R.string.enfp_title, R.string.enfp_desc)
